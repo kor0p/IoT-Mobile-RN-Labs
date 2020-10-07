@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "typeRoots": ["./src/@types", "./node_modules/@types"],
+    "experimentalDecorators": true,
+    "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "jsx": "react-native",
     "lib": ["dom", "esnext"],
@@ -7,6 +10,7 @@
     "noEmit": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "strict": true
+    "strict": true,
+    "noImplicitAny": false
   }
 }

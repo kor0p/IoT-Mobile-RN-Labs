@@ -1,4 +1,4 @@
-import * as Linking from 'expo-linking';
+import * as Linking from 'expo-linking'
 
 export default {
   prefixes: [Linking.makeUrl('/')],
@@ -6,14 +6,14 @@ export default {
     screens: {
       Root: {
         screens: {
-          TabOne: {
+          Auth: {
             screens: {
-              TabOneScreen: 'one',
+              Login: 'login',
             },
           },
-          TabTwo: {
+          Welcome: {
             screens: {
-              TabTwoScreen: 'two',
+              Welcome: '/',
             },
           },
         },
@@ -21,4 +21,4 @@ export default {
       NotFound: '*',
     },
   },
-};
+}
