@@ -6,6 +6,7 @@ import * as React from 'react'
 import Colors from '../constants/Colors'
 import useColorScheme from '../hooks/useColorScheme'
 import Login from '../screens/Login'
+import Register from '../screens/Register'
 import Welcome from '../screens/Welcome'
 import { BottomTabParamList, AuthParams, WelcomeParams } from '../types'
 
@@ -21,6 +22,8 @@ export default function BottomTabNavigator() {
             name='Auth'
             component={LoginNavigator}
             options={{
+                tabBarVisible: false,
+                tabBarButton: () => null,
                 tabBarIcon: ({ color }) => <TabBarIcon name='ios-code' color={color} />,
             }}
         />
@@ -45,11 +48,16 @@ function TabBarIcon(props: { name: string, color: string }) {
 const LoginStack = createStackNavigator<AuthParams>()
 
 function LoginNavigator() {
-    return <LoginStack.Navigator>
+    return <LoginStack.Navigator initialRouteName='Login'>
         <LoginStack.Screen
             name='Login'
             component={Login}
             options={{ headerTitle: 'Login' }}
+        />
+        <LoginStack.Screen
+            name='Register'
+            component={Register}
+            options={{ headerTitle: 'Register' }}
         />
     </LoginStack.Navigator>
 }

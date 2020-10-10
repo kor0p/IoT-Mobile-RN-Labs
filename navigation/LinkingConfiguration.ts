@@ -9,6 +9,7 @@ export default {
           Auth: {
             screens: {
               Login: 'login',
+              Register: 'register',
             },
           },
           Welcome: {
